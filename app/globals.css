@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — oklch for perceptual uniformity */
+  --color-cream: oklch(97% 0.008 85);
+  --color-blush: oklch(85% 0.055 15);
+  --color-blush-deep: oklch(72% 0.08 15);
+  --color-sage: oklch(82% 0.04 155);
+  --color-sage-deep: oklch(65% 0.06 155);
+  --color-lavender: oklch(80% 0.05 290);
+  --color-gold: oklch(82% 0.12 85);
+  --color-gold-light: oklch(92% 0.08 85);
+
+  /* Neutrals */
+  --color-ink: oklch(22% 0.02 70);
+  --color-ink-muted: oklch(55% 0.02 70);
+  --color-ink-light: oklch(75% 0.01 70);
+
+  /* Surfaces */
+  --color-surface: oklch(98% 0.005 85);
+  --color-surface-card: oklch(100% 0 0);
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+
+  /* Spacing extras */
+  --spacing-18: 4.5rem;
+
+  /* Border radius */
+  --radius-card: 0.75rem;
+  --radius-button: 0.5rem;
+
+  /* Shadows — soft, airy */
+  --shadow-card: 0 1px 3px oklch(0% 0 0 / 4%), 0 1px 2px oklch(0% 0 0 / 3%);
+  --shadow-card-hover: 0 4px 16px oklch(0% 0 0 / 6%);
+  --shadow-soft: 0 2px 8px oklch(0% 0 0 / 3%);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: 0.01em;
+}
+
+/* Serif utility for headings */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+/* Prose overrides for blog content */
+.prose {
+  max-width: 65ch;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: var(--font-serif);
+  color: var(--color-ink);
+}
+
+.prose p {
+  color: var(--color-ink-muted);
+  line-height: 1.8;
+}
