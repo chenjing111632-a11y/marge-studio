@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marge Studio — 有质感的数字文具</title>
+  <style>
+    :root {
+      --bg: #faf6f1;
+      --card: #ffffff;
+      --accent: #c4a29a;
+      --accent-deep: #a8837b;
+      --text: #3a322e;
+      --muted: #9b8b84;
+      --tag-bg: #f5ede6;
+      --border: #ede4db;
+      --shadow: 0 1px 3px rgba(0,0,0,.04), 0 1px 2px rgba(0,0,0,.03);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, 'Noto Serif SC', 'Songti SC', 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 40px 16px 60px;
+      letter-spacing: 0.01em;
+    }
+    .container { width: 100%; max-width: 420px; }
+
+    .header { text-align: center; margin-bottom: 36px; }
+    .logo {
+      font-size: 13px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px;
+    }
+    .tagline {
+      font-size: 15px; color: var(--muted); font-style: italic;
+      line-height: 1.8; max-width: 280px; margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 11px; font-weight: 600; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    .product-card {
+      background: var(--card); border-radius: 12px;
+      padding: 22px 20px; margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      cursor: pointer; transition: box-shadow .25s;
+    }
+    .product-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+    .product-card .tag-row { display: flex; gap: 8px; margin-bottom: 10px; }
+    .product-card .tag {
+      font-size: 10px; background: var(--tag-bg); color: var(--accent-deep);
+      padding: 3px 10px; border-radius: 20px; letter-spacing: 1px;
+    }
+    .product-card .title { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+    .product-card .desc { font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+    .product-card .bottom { display: flex; justify-content: space-between; align-items: center; }
+    .price { font-size: 18px; font-weight: 600; color: var(--text); }
+    .price .currency { font-size: 13px; color: var(--muted); }
+
+    .divider {
+      height: 1px; background: var(--border); margin: 28px 0;
+    }
+
+    .link-btn {
+      display: block; background: var(--text); color: #faf6f1;
+      text-align: center; padding: 14px; border-radius: 10px;
+      text-decoration: none; font-size: 14px; font-weight: 500;
+      margin-top: 16px; letter-spacing: 1px; transition: opacity .2s;
+    }
+    .link-btn:hover { opacity: .85; }
+    .link-btn.ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center; color: var(--muted); font-size: 11px;
+      margin-top: 40px; line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Marge Studio</div>
+      <div class="tagline">页边之外，安静生长。<br>为有审美洁癖的学生做数字文具。</div>
+    </div>
+
+    <div class="section-title">Digital Stationery</div>
+
+    <div class="product-card">
+      <div class="tag-row">
+        <span class="tag">Notion</span><span class="tag">新品</span>
+      </div>
+      <div class="title">晨间自习室 · 全能学生模板</div>
+      <div class="desc">课表 / 作业追踪 / 考试倒计时 / 绩点计算 — 一格装下整个学期</div>
+      <div class="bottom">
+        <span class="price"><span class="currency">¥</span>29</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="tag-row">
+        <span class="tag">Notion</span><span class="tag">热销</span>
+      </div>
+      <div class="title">Matin · 日计划 & 周复盘</div>
+      <div class="desc">清晨 5 分钟写下一天，夜晚 3 行回顾 — 轻量但每天用的那一种</div>
+      <div class="bottom">
+        <span class="price"><span class="currency">¥</span>19</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="tag-row">
+        <span class="tag">GoodNotes</span><span class="tag">套装</span>
+      </div>
+      <div class="title">Cornell 笔记内页 × 3 色</div>
+      <div class="desc">奶油 / 鼠尾草灰 / 薄藤紫，三色 Cornell 系统，iPad 手写党专属</div>
+      <div class="bottom">
+        <span class="price"><span class="currency">¥</span>15</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <a href="#" class="link-btn">在 Payhip 购买</a>
+    <a href="#" class="link-btn ghost">TikTok · @margestudio</a>
+
+    <footer>
+      Marge Studio © 2026<br>
+      安静地做有意义的东西
+    </footer>
+  </div>
+</body>
+</html>
